@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/main.css">
+  <title>Data Collector</title>
+
+</head>
+<body>
+  <div class="container responsive">
+
+      <h1 class="xyz" >Collecting Height </h1>
+      <h3 class="xyz" >Please fill the the entries </h3>
+      <div class="message" style="text-align:center; color:red;">
+        {{text | safe}}
+      </div>
+      <form  class="xyz responsive" action="{{url_for('success')}}" method="POST">
+        <input class="hte" type="email" placeholder="enter your email" title="Your email will be safe with us" name="email_name" required><br>
+        <input class="ht" type="number" min="50", max="300" placeholder="height in cm" title="Your data will be safe with us"  name="height_name" required><br>
+        <button >Submit</button>
+      </form>
+
+  </div>
+</body>
+</html>
